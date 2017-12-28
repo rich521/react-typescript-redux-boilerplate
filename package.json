@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "tslint -c tslint.json 'src/**/*.ts'",
-    "build:dev": "npm run test && webpack --config ./webpack.config.js --progress --profile --color --display-error-details --display-cached --bail",
-    "build:prod": "cross-env NODE_ENV=production webpack --config ./webpack.config.js --progress --profile --color --display-error-details --display-cached --bail",
-    "watch": "webpack --config ./webpack.config.js --progress --profile --color --display-error-details --display-cached --bail --watch",
+    "build:dev": "npm run test && webpack --progress --profile --display-error-details --display-cached --bail",
+    "build:prod": "NODE_ENV='production' webpack -p --progress --profile --display-error-details --display-cached --bail",
+    "watch": "webpack --progress --profile --display-error-details --display-cached --bail --watch",
     "start": "npm run build:dev && webpack-dev-server --inline --hot"
   },
   "repository": {
